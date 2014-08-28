@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+
+	var chevy = {
+		make: "Chevy",
+		model: "Bel Air",
+		year: 1957,
+		color: "red",
+		passengers: 2,
+		convertible: false,
+		mileage: 1021,
+
+	}
+	
+
+	var cadillac = {
+		make: "cadillac",
+		mileage: 23000,
+		color: "blue",
+		coupe: false
+	}
+
+	var myObject = {};
+
+	myObject.mileage = 4000;
+
+	document.write(myObject.mileage);
+
+	var miles = cadillac.mileage;
+
+	cadillac.mileage = 50000;
+
+
+	document.write(cadillac.mileage);
+
+	document.write(chevy.make + ", " + cadillac.make);
+
+	console.log(cadillac);
+	console.log(chevy);
+	console.log(myObject);
+
+	function prequal(car) {
+		if (car.mileage > 10000) {
+			return false;
+		} else if (car.year > 1960) {
+			return false;
+		}
+		return true;
+	}
+
+	var taxi = {
+		name: "Yellow Taxi",
+		make: "webville motors",
+		mileage: 2000,
+		year: 1940
+	}
+
+	var worthALook = prequal(taxi);
+
+	if (worthALook) {
+		console.log("check out this " + taxi.name + ".");
+	} else {
+		console.log("skip this car");
+	}
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
